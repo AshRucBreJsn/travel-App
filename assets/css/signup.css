@@ -10,8 +10,7 @@ body
 	position: relative;
 	width: 400px;
 	height: 530px;
-	background-color: black;
-	opacity: 0.5;
+	background-color: rgba(0,0,0,0.4);
 	margin: 0 auto;
 	margin-top: 30px;
 	padding-top: 10px;
@@ -32,4 +31,9 @@ body
 label
 {
 	color: white;
+}
+.btn-primary
+{
+	background-color: #db349a;
+	border-color: #db349a;
 }

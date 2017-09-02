@@ -9,8 +9,7 @@ body
 	position: relative;
 	width: 400px;
 	height: 350px;
-	background-color: black;
-	opacity: 0.5;
+	background-color: rgba(0,0,0,0.4);
 	margin: 0 auto;
 	margin-top: 100px;
 	padding-top: 10px;
@@ -30,8 +29,9 @@ label
 }
 #login
 {
-	margin: 5px;
+	margin-top: 10px;
 	font-weight: bold;
+	width: 340px;
 
 }
 :: placeholder
