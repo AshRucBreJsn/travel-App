@@ -1,14 +1,14 @@
 
 body
 {
-	background: url(../images/signup.jpg) ; 
+	background: url(../images/signup2.jpg) ; 
 	background-size: cover;
 	font-family: sans-serif;
 }
 #form
 {
 	position: relative;
-	width: 400px;
+	width: 500px;
 	height: 550px;
 	background-color: rgba(0,0,0,0.4);
 	margin: 0 auto;
@@ -37,8 +37,8 @@ label
 }
 #submit
 {
-	margin-top: 10px;
+	margin-top: 30px;
 	font-weight: bold;
-	width: 340px;
+	width: 440px;
 
 }
