@@ -4,33 +4,34 @@
   <meta charset="utf-8">
   
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Time to Hack: Firebase with JavaScript and jQuery</title>
+  <title>Login page</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet"  href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+
   
 </head>
-<body>
+<body >
   <div class="container">
-    <hr/>
-    <div class="row">
-      <div class="col-md-6">
-       
-          <div class="form-group">
-            <label for="userId">User Id</label>
-            <input type="userId" class="form-control" id="loginUserId" required placeholder="Enter User Id">
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="loginPassword" placeholder="Enter Password">
-          </div>
-          <button type="submit" id="login" class="btn btn-primary addValue">LogIn</button>
-          <button type="submit" id="login" class="btn btn-primary addValue">Signup</button>
-
-       
-         <div id="passwordResult"> </div>
-      </div>
       
-    </div>
+      <div class="row" id="form">
+          <h1 id="header">Login</h1>
+          <div class="form-group">
+              <div class="form-group">
+                    <label for="userId">User Id</label>
+                    <input type="userId" class="form-control" id="loginUserId" required placeholder="Enter User Id">
+              </div>
+              <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Enter Password">
+              </div>
+              <button type="submit" id="login" class="btn btn-primary addValue">LogIn</button>
+              <button type="submit" id="login" class="btn btn-primary addValue">Signup</button>
+              <div id="passwordResult"> </div>
+          </div>     
+      </div>
   </div>
 
  <!-- Include Firebase Library -->

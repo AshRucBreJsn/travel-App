@@ -1,0 +1,37 @@
+body
+{
+	background: url(../images/login.jpg) ; 
+	background-size: cover;
+	font-family: sans-serif;
+}
+#form
+{
+	position: relative;
+	width: 400px;
+	height: 300px;
+	background-color: black;
+	opacity: 0.5;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 15px;
+	
+}
+#header
+{
+	color: white;
+
+}
+label
+{
+	color: white;
+}
+#login
+{
+	margin: 5px;
+	font-weight: bold;
+
+}
+
