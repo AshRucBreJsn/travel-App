@@ -1,0 +1,35 @@
+
+body
+{
+	background: url(../images/signup.jpg) ; 
+	background-size: cover;
+	font-family: sans-serif;
+}
+#form
+{
+	position: relative;
+	width: 400px;
+	height: 480px;
+	background-color: black;
+	opacity: 0.5;
+	margin: 0 auto;
+	margin-top: 100px;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 15px;
+	
+}
+#header
+{
+	color: white;
+
+}
+#submit
+{
+	font-weight: bold;
+}
+label
+{
+	color: white;
+}
