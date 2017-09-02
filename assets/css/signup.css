@@ -9,11 +9,11 @@ body
 {
 	position: relative;
 	width: 400px;
-	height: 530px;
+	height: 550px;
 	background-color: rgba(0,0,0,0.4);
 	margin: 0 auto;
-	margin-top: 30px;
-	padding-top: 10px;
+	margin-top: 10px;
+	padding-top: 0px;
 	padding-left: 30px;
 	padding-right: 30px;
 	border-radius: 15px;
@@ -21,7 +21,10 @@ body
 }
 #header
 {
-	color: white;
+	color: #00bc8c;
+	text-shadow: 1px 3px 1px black, 0 0 5px #00efdf, 0 0 5px darkblue;
+    text-align: center;
+    margin-bottom: 20px;
 
 }
 #submit
@@ -32,8 +35,10 @@ label
 {
 	color: white;
 }
-.btn-primary
+#submit
 {
-	background-color: #db349a;
-	border-color: #db349a;
+	margin-top: 10px;
+	font-weight: bold;
+	width: 340px;
+
 }

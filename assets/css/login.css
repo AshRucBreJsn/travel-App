@@ -8,7 +8,7 @@ body
 {
 	position: relative;
 	width: 400px;
-	height: 350px;
+	height: 370px;
 	background-color: rgba(0,0,0,0.4);
 	margin: 0 auto;
 	margin-top: 100px;
@@ -20,8 +20,10 @@ body
 }
 #header
 {
-	color: white;
-
+	color: #00bc8c;
+    text-shadow: 1px 3px 1px black, 0 0 5px #00efdf, 0 0 5px darkblue;
+    text-align: center;
+    margin-bottom: 20px;
 }
 label
 {
