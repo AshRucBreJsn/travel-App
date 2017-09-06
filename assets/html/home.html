@@ -12,7 +12,7 @@
 
 </head>
 <body>
-      <div class="container">
+    <div class="container">
         <!-- Jumbotron -->
         <div class="jumbotron" style="background-color: transparent;" >
            <h1 class="text-center" >Flight Search</h1>
@@ -22,8 +22,8 @@
             <h3 class="panel-title" style="font-size: 25px;">Flight</h3>
         </div>
         <div class="panel-body">
-           <div class="row">
-                <div class="col-lg-5">
+            <div class="row">
+                <div class="col-lg-3">
                     <div class="input-group">
                         <span class="input-group-btn">
                              <button class="btn btn-secondary" type="button">From</button>
@@ -31,10 +31,10 @@
                         <input type="text" class="form-control" placeholder="From...">
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-3">
                     <div class="input-group">
                         <span class="input-group-btn">
-                             <button class="btn btn-secondary" type="button">From</button>
+                             <button class="btn btn-secondary" type="button">To</button>
                          </span>
                         <input type="text" class="form-control" placeholder="To...">
                     </div>
@@ -42,9 +42,31 @@
                 <div class="col-lg-2">
                     <a href="#" class="btn btn-success">Search</a>    
                 </div>
+                <div class="col-lg-2">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                             <button class="btn btn-secondary" type="button">POI</button>
+                         </span>
+                        <input type="text" class="form-control" id="place">
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <a href="#" class="btn btn-success" id="find">Find</a>    
+                </div>
             </div>    
         </div>
-</div>
-
+    </div>
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-8" id="displayFlight">
+                 
+             </div>
+             <div class="col-lg-4" id="displayPoi">
+                 
+             </div>
+        </div>   
+    </div>
+        
+<script type="text/javascript" src="../javascript/poi.js"></script>
 </body>
 </html>
