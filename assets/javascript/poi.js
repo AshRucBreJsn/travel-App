@@ -2,7 +2,7 @@
 $("#find").on("click",function(){
 
 var place = $("#place").val();
-var queryURL = "https://api.sygictravelapi.com/1.0/en/places/list?query="+place+"&level=poi&limit=100"
+var queryURL = "https://api.sygictravelapi.com/1.0/en/places/list?query="+place+"&level=poi&limit=10"
 
 $.ajax({
     method: "GET",
@@ -26,11 +26,11 @@ $.ajax({
         var image = $("<img>");
         image.attr("src", places[i].thumbnail_url);
         newDiv.append(image);
-
-        var descDiv = $("<div>");
-        descDiv.html(places[i].perex);
+         
+        var descDiv = $("<h3>").html("Description: " + places[i].perex);
+        
         newDiv.append(descDiv);
-        // Append the new Gifs to the animal-view
+        
         $("#displayPoi").append(newDiv);
 
       }
