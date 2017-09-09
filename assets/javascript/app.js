@@ -16,7 +16,7 @@
     var email =$("#email").val().trim();
     var name =  $("#name").val().trim(); 
     var password=$("#password").val().trim();
-    window.location.href = "../html/login.html";
+    
      /* database.ref().push({
           name:  $("#name").val().trim(),
           email:  $("#email").val().trim(),
@@ -32,6 +32,7 @@
 
       }else {
          $("#validation").text("User Registered");
+         window.location.href = "../html/login.html";
                firebase.database().ref('users/' + userId).set({
                 email: email,
                 name:  name,
@@ -39,7 +40,7 @@
                });
       }
      
-
+    
    });
 
     $("#login").on("click", function(event) {
@@ -59,13 +60,14 @@
           if(snapshot.val() == null){
            $("#passwordResult").text("User Not Found, please signup");
           } else if(snapshot.val().password === password){
+
               window.location.href = "../html/home.html";
           }else{
              $("#passwordResult").text("Password is wrong.");
           }
           
           });
-
+       $(".panel-title").text(userId);
     }
 
    });

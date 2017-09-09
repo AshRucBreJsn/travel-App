@@ -18,6 +18,31 @@ body
 
    font-family: 'Pacifico', cursive;
 }
+#select
+{
+	margin-left: -45px;
+	margin-top: 10px;
+}
+#tripOptionDiv
+{
+	background-color: #ff66b3;
+	margin-top: 10px;
+}
+#flightDiv
+{
+	background-color:#cc0066;
+	margin-top: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	color: black
+}
+#flightDetailDiv
+{
+	background-color: #ccff33;
+	margin-top: 10px;
+	color: black;
+}
+
 
 
 

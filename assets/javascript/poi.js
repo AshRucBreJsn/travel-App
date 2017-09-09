@@ -12,7 +12,8 @@ $.ajax({
     }
   })
   .done(function( response ) {
-  	console.log(response);
+
+    console.log(response);
     var places = response.data.places;
     $("#displayPoi").empty();
     for (var i = 0; i < places.length; i++){
