@@ -60,7 +60,7 @@
           if(snapshot.val() == null){
            $("#passwordResult").text("User Not Found, please signup");
           } else if(snapshot.val().password === password){
-
+              console.log(userId);
               window.location.href = "../html/home.html";
           }else{
              $("#passwordResult").text("Password is wrong.");

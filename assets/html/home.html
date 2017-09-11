@@ -5,25 +5,18 @@
 	<title>Travel app</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    
 	<!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+   
 
 
 </head>
 <body>
-    <div class="col-lg-2">
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                             <button class="btn btn-secondary" type="button">POI</button>
-                         </span>
-                        <input type="text" class="form-control" id="place">
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <a href="#" class="btn btn-success" id="find">Find</a>
+    
 
-                </div>
     <div class="container">
         <!-- Jumbotron -->
         <div class="jumbotron" style="background-color: transparent;" >
@@ -73,6 +66,7 @@
                                                  <button class="btn btn-secondary" type="button">Date(YYYY-MM-DD)</button>
                                              </span>
                                             <input type="text" class="form-control" id="date" >
+                                            <div id="dncalendar-container"/>
                                         </div>
                             </div> 
                              </div>
@@ -96,8 +90,9 @@
             </div>
         </div>   
     </div>
-        
-<script type="text/javascript" src="../javascript/poi.js"></script>
+    
 <script type="text/javascript" src="../javascript/flightSearch.js"></script>
+<script type="text/javascript" src="../javascript/curency.js"></script>
+
 </body>
 </html>
