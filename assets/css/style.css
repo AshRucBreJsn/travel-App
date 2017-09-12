@@ -18,31 +18,88 @@ body
 
    font-family: 'Pacifico', cursive;
 }
+
+#displayFlight {
+	margin-top:15px;
+}
+
 #select
 {
-	margin-left: -45px;
-	margin-top: 10px;
+	margin-left: 0px;
+	/*margin-top: 10px;*/
 }
 #tripOptionDiv
 {
-	background-color: #ff66b3;
-	margin-top: 10px;
+	background-color: #303030;
+	padding:10px;
+	margin-top:4px;
 }
 #flightDiv
 {
-	background-color:#cc0066;
-	margin-top: 10px;
+	background-color:#464545;
+	margin-top: 7px;
 	font-size: 25px;
 	font-weight: bold;
-	color: black
+	color: #ffffff;
 }
 #flightDetailDiv
 {
-	background-color: #ccff33;
-	margin-top: 10px;
-	color: black;
+	background-color:#464545;
+	margin-top: 12px;
+	color: #ffffff;
+	padding:0px 15px;
 }
 
+.new-display {
+	margin-top:15px;
+	margin-bottom:20px;
+	padding:2% 2%;
+	border: 1px solid #00bc8c;
+	margin-right:8px;
+}
+.nameDisplay {
+	text-align: center;
+	font-size:225%;
+	color:#00bc8c;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
 
+#get-info {
+	width:100%;
+}
 
+.form-control{
+ 	font-size:14px;
+}
 
+#point-of-interest {
+	background-color:#efefef;
+	padding-top:15px;
+}
+
+#find-bg {
+	background-color:#efefef;
+}
+
+#person {
+	padding-top:12px;
+	padding-left:15px;
+}
+
+#place {
+	width:50%
+}
+#find-button {
+	width:100%;
+}
+
+#moreInfoButton {
+	width:100%;
+	background-color:#00bc8c;
+}
+
+#flightSearch {
+	width:100%;
+}

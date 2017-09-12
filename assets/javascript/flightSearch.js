@@ -16,9 +16,9 @@ $("#displayFlight").empty();
 
  var searchData="{'request':{'slice':[{'origin':'"+origin +
                   "','destination':'"+destination+"','date':'"+dateOfTravel+
-                  "'}],'passengers':{'adultCount':"+numberOfperson+"},'refundable':false,'solutions':10}}";
+                  "'}],'passengers':{'adultCount':"+numberOfperson+"},'refundable':false,'solutions':7}}";
 
-var queryURL = "https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyBj2HSobLVPo_ZGh3HUFnvgctXUOSdns1o";
+var queryURL = "https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyDIrElKtxlStGSYHu3QEdZXpKNSlC2yeVM";
 
 
 
@@ -40,8 +40,8 @@ $.ajax({
         
       //loop Through Trips options  
       for(var i=0;i<trip.tripOption.length; i++){
-        var tripOptionDiv = $("<div id='tripOptionDiv'>");
-        var flightDiv = $("<div id='flightDiv'>");
+        var tripOptionDiv = $('<div class="panel panel-default" id="tripOptionDiv">');
+        var flightDiv = $('<div class="panel-heading" id="flightDiv">');
 
         var totalFlightDuration =trip.tripOption[i].slice[0].duration;
 
@@ -68,7 +68,7 @@ $.ajax({
          
           //loop through leg
           for(var k=0; k<trip.tripOption[i].slice[0].segment[j].leg.length; k++){
-             var flightDetailDiv = $("<div id='flightDetailDiv' >");
+             var flightDetailDiv = $('<div class="panel panel-default" id="flightDetailDiv">');
              var flightDuration =trip.tripOption[i].slice[0].segment[j].leg[k].duration;
 
             var hours = Math.floor( flightDuration / 60);          
@@ -133,7 +133,7 @@ function getCityName(trip, destinationAirportCode){
 
 function populatePOI(distinationCityName){
  
-var queryURL = "https://api.sygictravelapi.com/1.0/en/places/list?query="+distinationCityName+"&level=poi&limit=10"
+var queryURL = "https://api.sygictravelapi.com/1.0/en/places/list?query="+distinationCityName+"&level=poi&limit=7"
 
 $.ajax({
     method: "GET",
@@ -151,19 +151,29 @@ $.ajax({
      
       if(places[i].thumbnail_url != null && places[i].thumbnail_url !==''
         && places[i].perex != null && places[i].perex !=='' ){
-        var newDiv = $("<div>");
+        var newDiv = $('<div class="panel panel-default">');
         newDiv.addClass("new-display");
 
 
-        var image = $("<img>");
-        image.attr("src", places[i].thumbnail_url);
-        newDiv.append(image);
+        // var image = $("<img>");
+        // image.attr("src", places[i].thumbnail_url);
+        // newDiv.append(image);
+
+        var title = $('<div class="panel-heading">');
+        title.addClass("nameDisplay");
+        title.html(places[i].name);
+        newDiv.append(title);
+        $("#displayTitle").append(newDiv);
          
-        var descDiv = $("<h3>").html(places[i].perex);
-        
+        var descDiv = $('<div class="panel-body">');
+        descDiv.html(places[i].perex);
         newDiv.append(descDiv);
-        
         $("#displayPoi").append(newDiv);
+        
+        var infoButton = $('<a target="_blank"><button type="button" class="btn btn-primary" id="moreInfoButton">Get More Info</button></a>');
+        infoButton.attr('href', places[i].url);
+        newDiv.append(infoButton);
+        $("#displayButton").append(newDiv);
 
       }
       

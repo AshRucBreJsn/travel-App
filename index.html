@@ -2,12 +2,14 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
-	<title>Travel app</title>
+    <title>Travel app</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/front-style.css">
-	<!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/front-style.css">
 
 
 </head>
@@ -29,5 +31,39 @@
     <div  >
             <h1 class="text-center" style="font-size: 90px;">Flight Search</h1>
     </div>
+
+    <div class="slider fullscreen">
+            <ul class="slides">
+                <li>
+                    <img src=assets/images/newyork.jpg>
+                </li>
+                <li>
+                    <img src=assets/images/cleveland.jpg>
+                </li>
+                <li>
+                    <img src=assets/images/island.jpg>
+                </li>
+                <li>
+                    <img src=assets/images/london.jpg>
+                </li>
+                <li>
+                    <img src=assets/images/greece.jpg>
+                </li>
+            </ul>
+        </div>
+        <!--your code end-->
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+        <!--Materializecss Slider-->
+        <script>
+            $(document).ready(function () {
+                $('.slider').slider({full_width: true});
+            });
+        </script>
 </body>
 </html>
