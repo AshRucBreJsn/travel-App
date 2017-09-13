@@ -10,7 +10,7 @@ $("#displayFlight").empty();
 
  var origin = $("#from").val();
  var destination = $("#to").val();
- var numberOfperson = $(".option").val();
+ var numberOfperson =  $("#select option:selected").val();
  var dateOfTravel= $("#date").val();
 
 
