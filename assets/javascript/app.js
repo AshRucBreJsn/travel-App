@@ -28,7 +28,7 @@
             || name === null || name.trim()==='' 
             || password === null || password.trim()==='' ){
 
-        $("#validation").text("Please enter valid value for all fields");
+        $("#validation").text("Please enter valid input for all fields.");
 
       }else {
          $("#validation").text("User Registered");
@@ -51,19 +51,19 @@
         if(userId === null || userId.trim()==='' 
               || password === null || password.trim()==='' ){
 
-           $("#passwordResult").text("Please enter valid value for all fields");
+           $("#passwordResult").text("Please enter valid input for all fields.");
 
       }else {
 
           var userRef = firebase.database().ref('users/' + userId);
           userRef.on('value', function(snapshot) {
           if(snapshot.val() == null){
-           $("#passwordResult").text("User Not Found, please signup");
+           $("#passwordResult").text("User Not Found. Please Signup.");
           } else if(snapshot.val().password === password){
               console.log(userId);
               window.location.href = "../html/home.html";
           }else{
-             $("#passwordResult").text("Password is wrong.");
+             $("#passwordResult").text("Incorrect Password.");
           }
           
           });

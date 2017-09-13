@@ -10,15 +10,19 @@ $("#displayFlight").empty();
 
  var origin = $("#from").val();
  var destination = $("#to").val();
+<<<<<<< HEAD
+ var numberOfperson = $("#select option:selected").val();
+=======
  var numberOfperson =  $("#select option:selected").val();
+>>>>>>> b39168228b3c0b316f2a67b6be03e44ce45e0667
  var dateOfTravel= $("#date").val();
 
 
  var searchData="{'request':{'slice':[{'origin':'"+origin +
                   "','destination':'"+destination+"','date':'"+dateOfTravel+
-                  "'}],'passengers':{'adultCount':"+numberOfperson+"},'refundable':false,'solutions':7}}";
+                  "'}],'passengers':{'adultCount':"+numberOfperson+"},'refundable':false,'solutions':3}}";
 
-var queryURL = "https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyDIrElKtxlStGSYHu3QEdZXpKNSlC2yeVM";
+var queryURL = "https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyBj2HSobLVPo_ZGh3HUFnvgctXUOSdns1o";
 
 
 
@@ -40,7 +44,7 @@ $.ajax({
         
       //loop Through Trips options  
       for(var i=0;i<trip.tripOption.length; i++){
-        var tripOptionDiv = $('<div class="panel panel-default" id="tripOptionDiv">');
+        var tripOptionDiv = $('<div class="panel panel-default" id="tripOptionDiv"><button type="button" class="btn btn-primary" id="trip-option-button">Click To Purchase Tickets</button></div>');
         var flightDiv = $('<div class="panel-heading" id="flightDiv">');
 
         var totalFlightDuration =trip.tripOption[i].slice[0].duration;
@@ -49,11 +53,11 @@ $.ajax({
         var totalMinutes = totalFlightDuration % 60;  
 
 
-        flightDiv.html("Total tickets cost : " +trip.tripOption[i].saleTotal +"<br>" +
-                        "Flight Duration : " + totalHours +" Hrs " + totalMinutes + " Minutes");
+        flightDiv.html('<span id="ticket-cost-header">Total Ticket Cost: </span>' +trip.tripOption[i].saleTotal +" <br>" +
+                        '<span id="flight-duration-header">Flight Duration: </span>' + totalHours + " Hrs " + totalMinutes + " Minutes");
         tripOptionDiv.append(flightDiv);
           //total tickets cost
-        console.log("total tickets cost : " +trip.tripOption[i].saleTotal);
+        console.log("Total Ticket Costs : " +   trip.tripOption[i].saleTotal);
         // How long is the flight
         console.log("Flight Duration : " +trip.tripOption[i].slice[0].duration/60);
 
@@ -63,7 +67,7 @@ $.ajax({
            console.log("**********");
            var carrierCode= trip.tripOption[i].slice[0].segment[j].flight.carrier;
            var carrierName=getCarrierName(trip, carrierCode);
-           console.log("Flight Carrier and number  : " + carrierCode+":"+carrierName+ ":" +trip.tripOption[i].slice[0].segment[j].flight.number);
+           console.log("Flight Carrier and Number: " + carrierCode+":"+carrierName+ ":" +trip.tripOption[i].slice[0].segment[j].flight.number);
            //get the carrier name 
          
           //loop through leg
@@ -76,13 +80,21 @@ $.ajax({
             var arrivalDate= new Date(trip.tripOption[i].slice[0].segment[j].leg[k].arrivalTime);
             var departureDate= new Date(trip.tripOption[i].slice[0].segment[j].leg[k].departureTime);
 
+<<<<<<< HEAD
+             flightDetailDiv.html('<h4 id="flight-name-title">Flight Name </h4>' + carrierName+' <br> <h4 id="origin-title">Origin </h4>' +trip.tripOption[i].slice[0].segment[j].leg[k].origin +
+                                ' <br> <h4 id="destination-title">Destination </h4>' +trip.tripOption[i].slice[0].segment[j].leg[k].destination +"<br>"+
+                                ' <h4 id="departure-title">Departure Time </h4>' + departureDate.getFullYear()+ "-" + (departureDate.getMonth()+1) + "-"+departureDate.getDate()+ " " +
+                                departureDate.getHours() + ":" + departureDate.getMinutes()+ 
+                                ' <br> <h4 id="arrival-title">Arrival Time </h4>' + arrivalDate.getFullYear()+ "-" + (arrivalDate.getMonth()+1)+ "-"+arrivalDate.getDate()+ " " +
+=======
              flightDetailDiv.html("Flight name  : " + carrierName+" <br> Origin  : " +trip.tripOption[i].slice[0].segment[j].leg[k].origin +
                                 " <br> Destination  : " +trip.tripOption[i].slice[0].segment[j].leg[k].destination +"<br>"+
                                 " DepartureTime  : " + departureDate.getFullYear()+ "-" + (departureDate.getMonth()+1)+ "-"+departureDate.getDate()+ " " +
                                 departureDate.getHours() + ":" + departureDate.getMinutes()+ 
                                 " <br> ArrivalTime  : " + arrivalDate.getFullYear()+ "-" + (arrivalDate.getMonth()+1)+ "-"+arrivalDate.getDate()+ " " +
+>>>>>>> b39168228b3c0b316f2a67b6be03e44ce45e0667
                                 arrivalDate.getHours() + ":" + arrivalDate.getMinutes() +
-                                " <br> Duration  : " + hours +" Hrs " + minutes + " Minutes");
+                                ' <br> <h4 id="duration-title">Duration </h4>' + hours + " Hrs " + minutes + " Minutes");
           tripOptionDiv.append(flightDetailDiv);
            console.log("--------------");
             console.log("Duration  : " +trip.tripOption[i].slice[0].segment[j].leg[k].duration );
@@ -151,7 +163,7 @@ $.ajax({
      
       if(places[i].thumbnail_url != null && places[i].thumbnail_url !==''
         && places[i].perex != null && places[i].perex !=='' ){
-        var newDiv = $('<div class="panel panel-default">');
+        var newDiv = $('<div class="panel panel-default" id="poi-panel">');
         newDiv.addClass("new-display");
 
 
