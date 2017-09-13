@@ -1,7 +1,7 @@
 
 body
 {
-	background: url(../images/signup2.jpg) ; 
+	background: url(../images/background_signup.jpg) ; 
 	background-size: cover;
 	font-family: sans-serif;
 }
@@ -12,17 +12,20 @@ body
 	height: 550px;
 	background-color: rgba(0,0,0,0.4);
 	margin: 0 auto;
-	margin-top: 10px;
+	margin-top: 60px;
 	padding-top: 0px;
 	padding-left: 30px;
 	padding-right: 30px;
 	border-radius: 15px;
+	border:1px solid #00bc8c;
 	
 }
 #header
 {
+	font-size:56px;
+	font-family: 'Montserrat', sans-serif;
 	color: #00bc8c;
-	text-shadow: 1px 3px 1px black, 0 0 5px #00efdf, 0 0 5px darkblue;
+	text-shadow: 1px 4px 1px black, 0 0 5px black;
     text-align: center;
     margin-bottom: 20px;
 

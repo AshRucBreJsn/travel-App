@@ -1,14 +1,30 @@
 body
 {
-	background-image: url(../images/background.jpg) ;
+	background-image: url(../images/background2.jpg) ;
+	background-size: cover;
+    /*background-position: center;*/
 	
 }
 .text-center
 {
-	font-family: 'Pacifico', cursive;
-	text-shadow: 1px 1px 2px black, 0 0 25px #00efdf, 0 0 5px darkblue; 
+	font-family: 'Montserrat', cursive;
+	text-shadow: 1px 7px 1px black, 0 0 5px black; 
+	font-size:90px;	
 	
 }
+#home-page-header {
+	margin-top:-25px;
+	font-size:90px;
+}
+
+#tagline {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 1px 5px 1px black, 0 0 5px black;
+	margin-top: 100px;
+	
+}
+
 .panel
 {	
 	margin-top: -40px;
@@ -16,11 +32,16 @@ body
 .panel-title
 {
 
-   font-family: 'Pacifico', cursive;
+   font-family: 'Montserrat', cursive;
 }
 
 #displayFlight {
 	margin-top:15px;
+	margin-left:-15px;
+}
+
+#displayPoi {
+	margin-left:9px;
 }
 
 #select
@@ -30,10 +51,23 @@ body
 }
 #tripOptionDiv
 {
+	position:relative;
 	background-color: #303030;
 	padding:10px;
 	margin-top:4px;
+	border:1px solid #00bc8c;
 }
+
+#trip-option-button {
+	width:100%;
+	background-color:#00bc8c;
+	position:absolute;
+	bottom:0;
+	right:0;
+	/*margin-top:100px;*/
+	padding:2px 0px;
+}
+
 #flightDiv
 {
 	background-color:#464545;
@@ -103,3 +137,72 @@ body
 #flightSearch {
 	width:100%;
 }
+
+#flight-ticket-header {
+	margin-top:-21px;
+	padding:0px 10px;
+	text-align:center;
+	background-color:#00bc8c;
+}
+
+#flight-ticket-header h2{
+	margin-left:-10px;
+}
+
+#poi-header {
+	margin-top:-21px;
+	padding:0px 10px;
+	text-align:center;
+	background-color:#00bc8c;
+}
+
+#poi-header h2{
+	margin-left:15px;
+}
+
+#poi-panel {
+	margin-top:18px;
+	border:1px solid #00bc8c;
+
+}
+
+
+/*All titles in the flight app javascript*/
+#ticket-cost-header {
+	color:#00bc8c;
+}
+
+#flight-duration-header {
+	color:#00bc8c;
+}
+
+#flight-name-title {
+	color:#00bc8c;
+	margin-bottom:4px;
+}
+
+#origin-title {
+	color:#00bc8c;
+	margin-bottom:4px;
+}
+
+#destination-title {
+	color:#00bc8c;
+	margin-bottom:4px;
+}
+
+#departure-title {
+	color:#00bc8c;
+	margin-bottom:4px;
+}
+
+#arrival-title {
+	color:#00bc8c;
+	margin-bottom:4px;
+}
+
+#duration-title {
+	color:#00bc8c;
+	margin-bottom:4px;
+}
+

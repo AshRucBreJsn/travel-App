@@ -2,8 +2,15 @@
 .text-center
 {
 	color: white;
-	font-family: 'Pacifico', cursive;
-	text-shadow: 1px 10px 1px black, 0 0 25px #00efdf, 0 0 5px darkblue;
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 1px 10px 1px black, 0 0 5px black;
+	margin-top: 100px;
+	
+}
+#tagline {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 1px 5px 1px black, 0 0 5px black;
 	margin-top: 100px;
 	
 }
@@ -14,10 +21,23 @@
 .panel-title
 {
 
-   font-family: 'Pacifico', cursive;
+   font-family: 'Montserrat', sans-serif;
+
 }
 .slider
 {
 	position: absolute;
 	z-index: -1;
+}
+#homePagePanel{
+	width:39%;
+	margin-left:31%;
+}
+
+#signup-button {
+	margin:auto 0px;
+}
+
+#login-button {
+	margin:auto 0px;
 }
