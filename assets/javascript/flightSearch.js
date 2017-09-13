@@ -10,7 +10,7 @@ $("#displayFlight").empty();
 
  var origin = $("#from").val();
  var destination = $("#to").val();
-<<<<<<< HEAD
+
  var numberOfperson = $("#select option:selected").val();
 =======
  var numberOfperson =  $("#select option:selected").val();
