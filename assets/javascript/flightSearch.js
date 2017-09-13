@@ -78,9 +78,9 @@ $.ajax({
 
              flightDetailDiv.html("Flight name  : " + carrierName+" <br> Origin  : " +trip.tripOption[i].slice[0].segment[j].leg[k].origin +
                                 " <br> Destination  : " +trip.tripOption[i].slice[0].segment[j].leg[k].destination +"<br>"+
-                                " DepartureTime  : " + departureDate.getFullYear()+ "-" + departureDate.getMonth()+ "-"+departureDate.getDate()+ " " +
+                                " DepartureTime  : " + departureDate.getFullYear()+ "-" + (departureDate.getMonth()+1)+ "-"+departureDate.getDate()+ " " +
                                 departureDate.getHours() + ":" + departureDate.getMinutes()+ 
-                                " <br> ArrivalTime  : " + arrivalDate.getFullYear()+ "-" + arrivalDate.getMonth()+ "-"+arrivalDate.getDate()+ " " +
+                                " <br> ArrivalTime  : " + arrivalDate.getFullYear()+ "-" + (arrivalDate.getMonth()+1)+ "-"+arrivalDate.getDate()+ " " +
                                 arrivalDate.getHours() + ":" + arrivalDate.getMinutes() +
                                 " <br> Duration  : " + hours +" Hrs " + minutes + " Minutes");
           tripOptionDiv.append(flightDetailDiv);
