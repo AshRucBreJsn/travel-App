@@ -93,7 +93,7 @@ $.ajax({
                                 " <br> ArrivalTime  : " + arrivalDate.getFullYear()+ "-" + (arrivalDate.getMonth()+1)+ "-"+arrivalDate.getDate()+ " " +
 
                                 arrivalDate.getHours() + ":" + arrivalDate.getMinutes() +
-                                ' <br> <h4 id="duration-title">Duration </h4>' + hours + " Hrs " + minutes + " Minutes");
+                                ' <br> <h4 id="duration-title">Duration </h4>' + hours + " Hrs " + minutes + " Minutes"));
           tripOptionDiv.append(flightDetailDiv);
            console.log("--------------");
             console.log("Duration  : " +trip.tripOption[i].slice[0].segment[j].leg[k].duration );
