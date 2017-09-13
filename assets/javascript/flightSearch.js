@@ -11,9 +11,9 @@ $("#displayFlight").empty();
  var origin = $("#from").val();
  var destination = $("#to").val();
  var numberOfperson = $("#select option:selected").val();
-=======
+
  var numberOfperson =  $("#select option:selected").val();
->>>>>>> b39168228b3c0b316f2a67b6be03e44ce45e0667
+
  var dateOfTravel= $("#date").val();
 
 
@@ -79,19 +79,19 @@ $.ajax({
             var arrivalDate= new Date(trip.tripOption[i].slice[0].segment[j].leg[k].arrivalTime);
             var departureDate= new Date(trip.tripOption[i].slice[0].segment[j].leg[k].departureTime);
 
-<<<<<<< HEAD
+
              flightDetailDiv.html('<h4 id="flight-name-title">Flight Name </h4>' + carrierName+' <br> <h4 id="origin-title">Origin </h4>' +trip.tripOption[i].slice[0].segment[j].leg[k].origin +
                                 ' <br> <h4 id="destination-title">Destination </h4>' +trip.tripOption[i].slice[0].segment[j].leg[k].destination +"<br>"+
                                 ' <h4 id="departure-title">Departure Time </h4>' + departureDate.getFullYear()+ "-" + (departureDate.getMonth()+1) + "-"+departureDate.getDate()+ " " +
                                 departureDate.getHours() + ":" + departureDate.getMinutes()+ 
                                 ' <br> <h4 id="arrival-title">Arrival Time </h4>' + arrivalDate.getFullYear()+ "-" + (arrivalDate.getMonth()+1)+ "-"+arrivalDate.getDate()+ " " +
-=======
+
              flightDetailDiv.html("Flight name  : " + carrierName+" <br> Origin  : " +trip.tripOption[i].slice[0].segment[j].leg[k].origin +
                                 " <br> Destination  : " +trip.tripOption[i].slice[0].segment[j].leg[k].destination +"<br>"+
                                 " DepartureTime  : " + departureDate.getFullYear()+ "-" + (departureDate.getMonth()+1)+ "-"+departureDate.getDate()+ " " +
                                 departureDate.getHours() + ":" + departureDate.getMinutes()+ 
                                 " <br> ArrivalTime  : " + arrivalDate.getFullYear()+ "-" + (arrivalDate.getMonth()+1)+ "-"+arrivalDate.getDate()+ " " +
->>>>>>> b39168228b3c0b316f2a67b6be03e44ce45e0667
+
                                 arrivalDate.getHours() + ":" + arrivalDate.getMinutes() +
                                 ' <br> <h4 id="duration-title">Duration </h4>' + hours + " Hrs " + minutes + " Minutes");
           tripOptionDiv.append(flightDetailDiv);
